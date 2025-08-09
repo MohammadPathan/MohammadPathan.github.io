@@ -12070,12 +12070,12 @@ pre .code {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  max-width: 550px; /* Default for mobile */
+  max-width: 50%; /* Default for mobile */
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1000px) {
   .header .header-content {
-    max-width: 50%; /* Applies to tablets and desktops */
+    max-width: 550px; 
   }
 }
 
@@ -12225,4 +12225,86 @@ pre .code {
 
 .section-lg {
   padding: 100px 0 !important;
+}
+
+/* Project and Research CSS*/
+
+.moe-center-div{
+  justify-content: center;
+  display: flex;
+}
+
+.moe-image{
+  width: 600px;
+  height: 600px;
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  margin: 2px 2px 15px 2px;
+}
+
+.moe-image-cnn{
+  width: 100%;
+  height: fit-content;
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  margin: 2px 2px 15px 2px;
+}
+
+.moe-iframe {
+  width: 100%;
+  height: 600px;
+}
+
+@media (max-width: 600px) {
+  .moe-iframe {
+    height: 250px;
+  }
+
+  .moe-image{
+    width: 100%;
+    height: 250px;
+  }
+}
+
+
+.moe-ul {
+  list-style-type: none; 
+  padding-left: 0; 
+}
+
+.moe-ul strong{
+  font-weight: 400;
+}
+
+/* font colours set to ul to match with p*/
+.moe-ul li {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.015rem;
+  font-weight: 200;
+  line-height: 1.5;
+  color: #111111;
+  word-spacing: 2px;
+  position: relative; 
+  margin-left: 20px; 
+}
+
+.moe-ul li::before {
+  content: '\2022'; 
+  color: var(--primary);
+  font-weight: bold;
+  position: absolute; 
+  left: -20px; 
+  top: 0;
+}
+
+moecode{
+  font-family: monospace;
+  background-color: #d3d3d3;
+  font-size: 1.015rem;
+  font-weight: 200;
+  line-height: 1.5;
+  color: #111111;
+  word-spacing: 2px;
+  border: 2px solid #d3d3d3;
+  border-radius: 4px;
 }
